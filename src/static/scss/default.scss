@@ -1,0 +1,357 @@
+$color-black: #161616;
+$color-black--light: #333;
+$color-black--lighter: #555;
+$color-white: #f1f1f1;
+$color-primary: green;
+$color-yellow: #ff0;
+$color-primary--light: lighten($color: $color-primary, $amount: 5);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: $color-black;
+    width: 100vw;
+    color: $color-white;
+}
+
+a {
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+input, select {
+    margin-bottom: 1em;
+    padding: 1em 1em;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+#submit {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color-primary--light;
+    }
+}
+
+#collect {
+    background-color: $color-primary;
+    border-radius: 5px;
+    align-self: center;
+    width: 100%;
+    color: $color-white;
+    margin-top: 2em;
+
+    &:hover {
+        background-color: $color-primary--light;
+        cursor: pointer;
+    }
+}
+
+#conclude {
+    background-color: $color-black;
+    border-radius: 5px;
+    align-self: center;
+    width: 100%;
+    color: $color-white;
+    margin-top: 2em;
+
+    &:hover {
+        background-color: $color-black--light;
+        cursor: pointer;
+    }
+}
+
+//OVERALL
+
+header {
+    position: fixed;
+    width: 100%;
+
+    .nav {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        & .left {
+            position: absolute;
+            top: 50%;
+            left: 2em;
+            transform: translate(0, -50%);
+        }
+
+        & .right {
+            position: absolute;
+            top: 50%;
+            right: 2em;
+            transform: translate(0, -50%);
+        }
+    }
+}
+
+.page {
+    &_index {
+        width: 100%;
+        padding-top: 15vh;
+        padding-bottom: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & h2 {
+            margin-bottom: 2em;
+        }
+
+        & .brand {
+            text-align: center;
+
+            & h1 {
+                margin-bottom: .5em;
+            }
+
+            & .byline {
+                color: $color-black--lighter;
+                display: block;
+            }
+        }
+    }
+
+    &_info {
+        padding-bottom: 10vh;
+    }
+
+    &_perfil, &_signup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        
+        & form {
+            width: 80%;
+        }
+
+        
+        & h3 {
+            margin: 1em 0;
+        }
+    }
+
+    &_donation {
+        padding-top: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 15vh;
+
+        & form {
+            width: 80%;
+        }
+    }
+
+    &_donations {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & h2 {
+            margin-bottom: 2em;
+        }
+    }
+
+    &_login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        flex-direction: column;
+        height: 100vh;
+
+        & h1 {
+            margin-bottom: 3em;
+        }
+
+        & form {
+            width: 80%;
+        }
+    }
+}
+
+.section {
+    width: 100%;
+    padding-bottom: 3em;
+
+    & h2 {
+        margin-bottom: 1em;
+    }
+
+    &:last-child {
+        padding-bottom: 5vh !important;
+    }
+
+    &.about {
+        background-color: $color-white;
+        padding: 2em;
+        color: $color-black;
+
+        & .about_list {
+            &_item {
+                &:not(:last-child) {
+                    margin-bottom: 1em;
+                }
+
+                &::before {
+                    content: "\2713 ";
+                    color: $color-primary;
+                    margin-right: 1em;
+                }
+            }   
+        }   
+    }
+
+    &.oil {
+        padding: 2em;
+        background-color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        & p {
+            text-align: justify;
+        }
+
+        & .more {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    &.info {
+        padding: 2em;
+        background-color: $color-white;
+        color: $color-black;
+
+        &:first-child {
+            padding-top: 15vh !important;
+        }
+
+        & p {
+            text-align: justify;
+        }
+
+       
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    background-color: $color-black--light;
+
+    & .footer_item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            background-color: $color-black--lighter;
+            text-decoration: none;
+        }
+    }
+}
+
+//COMPONENTS
+.btn {
+    display: inline-block;
+    margin: 2em 0;
+    padding: 1em 2em;
+    width: 80%;
+
+    &--primary {
+        background-color: $color-primary;
+
+        &:hover {
+            background-color: $color-primary--light;
+            text-decoration: none;
+        }
+    }
+}
+
+.more {
+    display: inline-block;
+    margin: 2em 0;
+    padding: .5em 1em;
+    background-color: $color-black;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $color-black--light;
+        text-decoration: none;
+    }
+}
+
+.donation {
+    width: 80%;
+    background-color: #f1f1f1;
+    color: $color-black;
+    padding: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+        margin-bottom: 5vh;
+    }
+
+    &.completed {
+        background-color: $color-primary !important;
+        color: $color-white !important;
+    }
+
+    &.accepted {
+        background-color: $color-yellow;
+        color: $color-black;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 2em;
+    }
+}

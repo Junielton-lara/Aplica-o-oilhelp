@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%; }
+
+body {
+  font-family: sans-serif;
+  background-color: #161616;
+  width: 100vw;
+  color: #f1f1f1; }
+
+a {
+  color: #f1f1f1;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+input, select {
+  margin-bottom: 1em;
+  padding: 1em 1em;
+  border: none;
+  width: 100%;
+  border-radius: 5px; }
+
+#submit {
+  background-color: green;
+  color: #f1f1f1; }
+  #submit:hover {
+    cursor: pointer;
+    background-color: #009a00; }
+
+#collect {
+  background-color: green;
+  border-radius: 5px;
+  align-self: center;
+  width: 100%;
+  color: #f1f1f1;
+  margin-top: 2em; }
+  #collect:hover {
+    background-color: #009a00;
+    cursor: pointer; }
+
+#conclude {
+  background-color: #161616;
+  border-radius: 5px;
+  align-self: center;
+  width: 100%;
+  color: #f1f1f1;
+  margin-top: 2em; }
+  #conclude:hover {
+    background-color: #333;
+    cursor: pointer; }
+
+header {
+  position: fixed;
+  width: 100%; }
+  header .nav {
+    height: 10vh;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    header .nav .left {
+      position: absolute;
+      top: 50%;
+      left: 2em;
+      transform: translate(0, -50%); }
+    header .nav .right {
+      position: absolute;
+      top: 50%;
+      right: 2em;
+      transform: translate(0, -50%); }
+
+.page_index {
+  width: 100%;
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .page_index h2 {
+    margin-bottom: 2em; }
+  .page_index .brand {
+    text-align: center; }
+    .page_index .brand h1 {
+      margin-bottom: .5em; }
+    .page_index .brand .byline {
+      color: #555;
+      display: block; }
+
+.page_info {
+  padding-bottom: 10vh; }
+
+.page_perfil, .page_signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  padding-top: 15vh;
+  padding-bottom: 15vh; }
+  .page_perfil form, .page_signup form {
+    width: 80%; }
+  .page_perfil h3, .page_signup h3 {
+    margin: 1em 0; }
+
+.page_donation {
+  padding-top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 15vh; }
+  .page_donation form {
+    width: 80%; }
+
+.page_donations {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .page_donations h2 {
+    margin-bottom: 2em; }
+
+.page_login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: column;
+  height: 100vh; }
+  .page_login h1 {
+    margin-bottom: 3em; }
+  .page_login form {
+    width: 80%; }
+
+.section {
+  width: 100%;
+  padding-bottom: 3em; }
+  .section h2 {
+    margin-bottom: 1em; }
+  .section:last-child {
+    padding-bottom: 5vh !important; }
+  .section.about {
+    background-color: #f1f1f1;
+    padding: 2em;
+    color: #161616; }
+    .section.about .about_list_item:not(:last-child) {
+      margin-bottom: 1em; }
+    .section.about .about_list_item::before {
+      content: "\2713 ";
+      color: green;
+      margin-right: 1em; }
+  .section.oil {
+    padding: 2em;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+    .section.oil p {
+      text-align: justify; }
+    .section.oil .more {
+      margin-bottom: 0 !important; }
+  .section.info {
+    padding: 2em;
+    background-color: #f1f1f1;
+    color: #161616; }
+    .section.info:first-child {
+      padding-top: 15vh !important; }
+    .section.info p {
+      text-align: justify; }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color: #333; }
+  footer .footer_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    footer .footer_item:hover {
+      background-color: #555;
+      text-decoration: none; }
+
+.btn {
+  display: inline-block;
+  margin: 2em 0;
+  padding: 1em 2em;
+  width: 80%; }
+  .btn--primary {
+    background-color: green; }
+    .btn--primary:hover {
+      background-color: #009a00;
+      text-decoration: none; }
+
+.more {
+  display: inline-block;
+  margin: 2em 0;
+  padding: .5em 1em;
+  background-color: #161616;
+  border-radius: 5px; }
+  .more:hover {
+    background-color: #333;
+    text-decoration: none; }
+
+.donation {
+  width: 80%;
+  background-color: #f1f1f1;
+  color: #161616;
+  padding: 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column; }
+  .donation:last-child {
+    margin-bottom: 5vh; }
+  .donation.completed {
+    background-color: green !important;
+    color: #f1f1f1 !important; }
+  .donation.accepted {
+    background-color: #ff0;
+    color: #161616; }
+  .donation:not(:last-child) {
+    margin-bottom: 2em; }

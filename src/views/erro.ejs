@@ -1,0 +1,12 @@
+<%- include('partials/head.ejs') %>
+    <body>
+        <div class="page page_login">
+            <h2><%= erro.code %>: <%= erro.message %>.</h2>
+            <% if(logged == 'true') { %>
+                <a href="/" style="margin-top: 2em; display: inline-block;">Voltar ao ínicio.</a>
+            <% } else { %>
+                <a href="/login" style="margin-top: 2em; display: inline-block;">Voltar ao ínicio.</a>
+            <% } %>  
+        </div>
+    </body>
+</html>

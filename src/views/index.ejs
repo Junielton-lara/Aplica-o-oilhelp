@@ -1,0 +1,13 @@
+<%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/top-menu.ejs'); %>
+        <div class="page page_index">
+            <% if (role == 'DONOR') { %> 
+                <%- include('partials/donor-index.ejs') %> 
+            <% } else{ %>
+                <%- include('partials/collector-index.ejs') %> 
+            <% } %>      
+        </div>
+        <%- include('partials/bottom-menu.ejs'); %>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<form action="/cadastrar" method="post" class="form_signup">
+    <h3>Informações pessoais:</h3>
+    <select name="role">
+        <option value="" disabled selected>Deseja cadastrar como doador ou coletor?</option>
+        <option value="COLLECTOR">Coletor</option>
+        <option value="DONOR">Doador</option>
+    </select>
+    <input type="text" name="firstName" required  placeholder="Primeiro nome" id="firstName_input">
+    <input type="text" name="lastName" required  placeholder="Segundo nome" id="lastName_input">
+    <input type="email" name="email" required  placeholder="E-mail" id="email_input">
+    <input type="password" name="password" required placeholder="Senha" id="password_input">
+    <input type="password" name="password2" required placeholder="Confirmar senha" id="password_input">
+    <h3>Endereço:</h3>
+    <input type="text" name="street" required  placeholder="Rua" id="street_input">
+    <input type="number" name="number" required  placeholder="Número" id="street_input">
+    <input type="text" name="neighborhood" required  placeholder="Bairro" id="neighborhood_input">
+    <input type="text" name="zipcode" required  placeholder="CEP" id="zipcode_input">
+    <input type="submit" id="submit" required value="Cadastrar">
+</form>

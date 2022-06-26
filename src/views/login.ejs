@@ -1,0 +1,13 @@
+<%- include('partials/head.ejs') %>
+    <body>
+        <div class="page page_login">
+            <h1 class="logo">OILHELP</h1>
+            <form action="/login" method="post" class="form_login">
+                <input type="email" required name="email"  placeholder="E-mail" id="email_input">
+                <input type="password" required name="password" placeholder="Senha" id="password_input">
+                <input type="submit" id="submit" value="Entrar">
+            </form>
+            <a href="/cadastrar">Criar conta</a>
+        </div>
+    </body>
+</html>

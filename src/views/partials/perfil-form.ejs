@@ -1,0 +1,17 @@
+<form action="/perfil/atualizar" method="post" class="form_signup">
+    <h3>Informações pessoais:</h3>
+    <select name="role" disabled>
+        <option value="" disabled selected><%= user.role %> </option>
+    </select>
+    <input type="text" name="firstName" required value="<%= user.firstName %>"  placeholder="Primeiro nome" id="firstName_input">
+    <input type="text" name="lastName" required value="<%= user.lastName %>"  placeholder="Segundo nome" id="lastName_input">
+    <input type="email" name="email" required value="<%= user.email %>"  placeholder="E-mail" id="email_input">
+    <input type="password" name="password" placeholder="Senha" id="password_input">
+    <input type="password" name="password2" placeholder="Senha" id="password_input">
+    <h3>Endereço:</h3>
+    <input type="text" name="street" required value="<%= user.address.street %>"  placeholder="Rua" id="street_input">
+    <input type="number" name="number" required value="<%= user.address.number %>"  placeholder="Número" id="street_input">
+    <input type="text" name="neighborhood" required value="<%= user.address.neighborhood %>"  placeholder="Bairro" id="neighborhood_input">
+    <input type="text" name="zipcode" required value="<%= user.address.zipCode %>"  placeholder="CEP" id="zipcode_input">
+    <input type="submit" id="submit" value="Salvar">
+</form>

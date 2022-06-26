@@ -1,0 +1,12 @@
+<%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/top-menu.ejs'); %>
+        <div class="page page_donation">
+            <form action="/doar" method="POST">
+                <input type="date" required name="date" id="date">
+                <input type="time" required name="date" id="date">
+                <input type="submit" id="submit" value="Doar">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<% donations.forEach(donation => { %>
+    <div class="donation <%- donation.accepted == 1 ? 'accepted' : '' %> <%- donation.complete == 1 ? 'completed' : '' %>">
+        <h3><%= donation.donor.firstName + " " + donation.donor.lastName %></h3>
+        <p class="time"><%= donation.collectDate %></p>
+        <p class="address"><%= donation.donor.address.street %></p>
+
+        <% if(role != 'DONOR' && donation.accepted != 1 && (id == donation.collector_id || donation.collector_id == null )) { %>
+            <form action="/doacao/<%= donation.id %>/aceitar" method="POST">
+                <input type="submit" id="collect" value="Coletar">
+            </form>
+        <% } %>
+
+        <% if(role != 'DONOR' && donation.accepted == 1 && (id == donation.collector_id || donation.collector_id == null )) { %>
+            <form action="/doacao/<%= donation.id %>/concluir" method="POST">
+                <input type="submit" id="conclude" value="Concluir">
+            </form>
+        <% } %>
+        
+    </div>
+<% }); %>
